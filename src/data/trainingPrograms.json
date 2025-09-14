@@ -1,0 +1,206 @@
+[
+  {
+    "id": "football_beginner",
+    "sport": "football",
+    "title": "Football Fundamentals",
+    "description": "Essential football skills for beginners covering basic techniques, ball control, and fitness.",
+    "difficulty": "beginner",
+    "duration": "6 weeks",
+    "exercises": [
+      {
+        "id": "1",
+        "name": "Ball Control Drills",
+        "description": "Practice controlling the ball with both feet using various surfaces",
+        "duration": "15 minutes",
+        "reps": "3 sets",
+        "imageUrl": "/images/ball-control.jpg"
+      },
+      {
+        "id": "2",
+        "name": "Passing Practice",
+        "description": "Short and long passing techniques with accuracy focus",
+        "duration": "20 minutes",
+        "reps": "4 sets of 10",
+        "imageUrl": "/images/passing.jpg"
+      },
+      {
+        "id": "3",
+        "name": "Dribbling Cones",
+        "description": "Navigate through cones to improve agility and ball control",
+        "duration": "10 minutes",
+        "reps": "5 rounds",
+        "imageUrl": "/images/dribbling.jpg"
+      }
+    ]
+  },
+  {
+    "id": "basketball_intermediate",
+    "sport": "basketball",
+    "title": "Basketball Skills Development",
+    "description": "Intermediate basketball program focusing on shooting, dribbling, and defensive skills.",
+    "difficulty": "intermediate",
+    "duration": "8 weeks",
+    "exercises": [
+      {
+        "id": "4",
+        "name": "Free Throw Practice",
+        "description": "Consistent free throw shooting with proper form",
+        "duration": "20 minutes",
+        "reps": "100 shots",
+        "imageUrl": "/images/free-throws.jpg"
+      },
+      {
+        "id": "5",
+        "name": "Defensive Slides",
+        "description": "Lateral movement drills for better defensive positioning",
+        "duration": "15 minutes",
+        "reps": "8 sets of 30 seconds",
+        "imageUrl": "/images/defense.jpg"
+      },
+      {
+        "id": "6",
+        "name": "Three-Point Shooting",
+        "description": "Practice shooting from various three-point positions",
+        "duration": "25 minutes",
+        "reps": "50 shots per position",
+        "imageUrl": "/images/three-point.jpg"
+      }
+    ]
+  },
+  {
+    "id": "athletics_advanced",
+    "sport": "athletics",
+    "title": "Sprint & Field Mastery",
+    "description": "Advanced athletic training for sprint and field events with power development.",
+    "difficulty": "advanced",
+    "duration": "12 weeks",
+    "exercises": [
+      {
+        "id": "7",
+        "name": "Sprint Intervals",
+        "description": "High-intensity interval training for speed development",
+        "duration": "30 minutes",
+        "reps": "8x100m",
+        "imageUrl": "/images/sprints.jpg"
+      },
+      {
+        "id": "8",
+        "name": "Plyometric Training",
+        "description": "Explosive power exercises for improved athletic performance",
+        "duration": "25 minutes",
+        "reps": "4 sets of 8",
+        "imageUrl": "/images/plyometrics.jpg"
+      },
+      {
+        "id": "9",
+        "name": "Long Jump Technique",
+        "description": "Technical training for long jump approach and landing",
+        "duration": "40 minutes",
+        "reps": "12 jumps",
+        "imageUrl": "/images/long-jump.jpg"
+      }
+    ]
+  },
+  {
+    "id": "handball_beginner",
+    "sport": "handball",
+    "title": "Handball Basics",
+    "description": "Learn fundamental handball techniques including throwing, catching, and team tactics.",
+    "difficulty": "beginner",
+    "duration": "5 weeks",
+    "exercises": [
+      {
+        "id": "10",
+        "name": "Throwing Accuracy",
+        "description": "Practice various throwing techniques for goal scoring",
+        "duration": "20 minutes",
+        "reps": "6 sets of 10",
+        "imageUrl": "/images/handball-throw.jpg"
+      },
+      {
+        "id": "11",
+        "name": "Catching Drills",
+        "description": "Improve hand-eye coordination and catching skills",
+        "duration": "15 minutes",
+        "reps": "4 sets",
+        "imageUrl": "/images/catching.jpg"
+      },
+      {
+        "id": "12",
+        "name": "Court Movement",
+        "description": "Basic positioning and movement patterns on court",
+        "duration": "18 minutes",
+        "reps": "6 rounds",
+        "imageUrl": "/images/court-movement.jpg"
+      }
+    ]
+  },
+  {
+    "id": "hockey_intermediate",
+    "sport": "hockey",
+    "title": "Hockey Skills Enhancement",
+    "description": "Intermediate hockey training focusing on stick handling, shooting, and game strategy.",
+    "difficulty": "intermediate",
+    "duration": "10 weeks",
+    "exercises": [
+      {
+        "id": "13",
+        "name": "Stick Handling",
+        "description": "Advanced stick control and puck manipulation drills",
+        "duration": "20 minutes",
+        "reps": "5 sets",
+        "imageUrl": "/images/stick-handling.jpg"
+      },
+      {
+        "id": "14",
+        "name": "Shooting Practice",
+        "description": "Wrist shots, slap shots, and accuracy training",
+        "duration": "25 minutes",
+        "reps": "60 shots",
+        "imageUrl": "/images/hockey-shooting.jpg"
+      },
+      {
+        "id": "15",
+        "name": "Skating Drills",
+        "description": "Power skating and agility on ice",
+        "duration": "22 minutes",
+        "reps": "8 laps each drill",
+        "imageUrl": "/images/skating.jpg"
+      }
+    ]
+  },
+  {
+    "id": "kabaddi_advanced",
+    "sport": "kabaddi",
+    "title": "Kabaddi Combat Training",
+    "description": "Advanced kabaddi techniques including raiding, defending, and team coordination.",
+    "difficulty": "advanced",
+    "duration": "8 weeks",
+    "exercises": [
+      {
+        "id": "16",
+        "name": "Raiding Techniques",
+        "description": "Advanced raiding strategies and escape methods",
+        "duration": "30 minutes",
+        "reps": "15 raids",
+        "imageUrl": "/images/kabaddi-raid.jpg"
+      },
+      {
+        "id": "17",
+        "name": "Defensive Holds",
+        "description": "Master various defensive holds and tackles",
+        "duration": "25 minutes",
+        "reps": "10 sets",
+        "imageUrl": "/images/kabaddi-defense.jpg"
+      },
+      {
+        "id": "18",
+        "name": "Chain Formation",
+        "description": "Team coordination and chain defensive strategies",
+        "duration": "35 minutes",
+        "reps": "8 formations",
+        "imageUrl": "/images/kabaddi-chain.jpg"
+      }
+    ]
+  }
+]

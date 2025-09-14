@@ -1,8 +1,12 @@
-# AthleteX - Athletic Performance Management App
+# AthleteX MVP - AI-Powered Athletic Performance Management
 
-## Overview
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/user/athletex)
 
-AthleteX is a comprehensive Android application designed to help athletes track their performance, participate in assessment tests, follow training programs, and connect with other athletes through a social platform. The app is built using Kotlin and follows the MVVM (Model-View-ViewModel) architecture pattern with Firebase integration.
+## 🚀 Overview
+
+AthleteX is an AI-powered athletic performance management platform that provides comprehensive assessment, analysis, and improvement tools for athletes of all levels. This MVP showcases advanced AI features for assessment integrity, performance benchmarking, and talent identification.
+
+**🌐 Live MVP**: [https://athletex-mvp.vercel.app](https://athletex-mvp.vercel.app)
 
 ## Features
 
@@ -154,7 +158,203 @@ app/src/main/java/com/athletex/
 1. **Clone the Repository**:
    ```bash
    git clone <repository-url>
-   cd AthleteX
+# AthleteX Web Application
+
+A modern React + TypeScript web application for athletic performance management with Firebase backend.
+
+## Features
+
+### 🔐 Authentication
+- **Email/Password signup & login**
+- **Phone OTP login** with Firebase Auth + reCAPTCHA
+- **Role-based access** (Athlete/Admin)
+
+### 👤 Athlete Profile
+- **Comprehensive profile form** (Personal info, sports, address)
+- **Profile picture upload** to Firebase Storage
+- **Form validation** with react-hook-form + yup
+- **Clean, responsive UI** with Material-UI
+
+### 🎯 Assessment Tests
+- **Video recording** using browser MediaRecorder API
+- **5 test types**: Shot Put, Broad Jump, Shuttle Run, Squats, High Jump
+- **Camera access** with getUserMedia
+- **Video upload** to Firebase Storage
+- **AI scoring simulation** (dummy algorithm for demo)
+
+### 📈 Performance Metrics
+- **5 metric types**: 100m/200m/800m timing, Long Jump, Shot Put distance
+- **Interactive charts** with Chart.js/react-chartjs-2
+- **Personal best tracking**
+- **Progress calculation** (30-day improvement %)
+- **CRUD operations** (Create, Read, Update, Delete)
+
+### 🏋️ Training Programs
+- **6 sports programs**: Football, Basketball, Handball, Athletics, Hockey, Kabaddi
+- **3 difficulty levels**: Beginner, Intermediate, Advanced
+- **Static JSON data** with detailed exercise breakdowns
+- **Filtering & favorites** functionality
+- **Card-based Material-UI layout**
+
+### 🗣️ Social Feed (Placeholder)
+- Post creation with media upload
+- Like & comment system
+- Follow other athletes
+
+### 👨‍💼 Admin Dashboard (Placeholder)
+- View all athletes and rankings
+- Filter by sport, age, location
+- Review test results & shortlist athletes
+
+## Tech Stack
+
+### Frontend
+- **React 18** with TypeScript
+- **Material-UI (MUI)** for components & theming
+- **React Router** for navigation
+- **React Hook Form + Yup** for forms & validation
+- **Chart.js + react-chartjs-2** for data visualization
+
+### Backend & Services
+- **Firebase Authentication** (Email/Password + Phone OTP)
+- **Firestore Database** for data persistence
+- **Firebase Storage** for file uploads
+- **Browser APIs**: MediaRecorder, getUserMedia for video recording
+
+### Architecture
+- **MVVM Pattern**:
+  - **Views**: React components (src/pages, src/components)
+  - **ViewModels**: Custom hooks (src/hooks)
+  - **Models**: TypeScript interfaces (src/models)
+  - **Services**: Firebase operations (src/services)
+
+## Setup Instructions
+
+### 1. Prerequisites
+- Node.js 16+ and npm
+- Firebase project with Web app configured
+
+### 2. Firebase Setup
+1. Create a new Firebase project at [Firebase Console](https://console.firebase.google.com)
+2. Enable the following services:
+   - **Authentication** → Email/Password + Phone providers
+   - **Firestore Database** → Production mode
+   - **Storage** → Default bucket
+3. Add a Web app to get your config object
+4. Add your domain to Auth → Settings → Authorized domains (for local dev: `localhost`)
+
+### 3. Project Setup
+```bash
+# Install dependencies
+npm install
+
+# Update Firebase config
+# Edit src/config/firebase.ts with your Firebase project config:
+const firebaseConfig = {
+  apiKey: "your-api-key",
+  authDomain: "your-project.firebaseapp.com",
+  projectId: "your-project-id",
+  storageBucket: "your-project.appspot.com",
+  messagingSenderId: "your-sender-id",
+  appId: "your-app-id"
+};
+```
+
+### 4. Deploy Firestore Rules (Optional)
+```bash
+# Install Firebase CLI
+npm install -g firebase-tools
+
+# Login and initialize
+firebase login
+firebase init firestore
+
+# Deploy security rules
+firebase deploy --only firestore:rules
+```
+
+### 5. Run the Application
+```bash
+# Start development server
+npm start
+
+# Open http://localhost:3000
+```
+
+## Usage Guide
+
+### For Athletes
+1. **Sign up** with email or phone number
+2. **Complete your profile** with personal info and sports
+3. **Take assessment tests** by recording videos
+4. **Track performance metrics** and view progress charts
+5. **Browse training programs** filtered by sport/difficulty
+
+### For Admins
+1. **Sign up** normally (role can be changed in Firestore manually)
+2. **Access admin dashboard** with elevated permissions
+3. **View all athlete data** and assessment results
+
+## Project Structure
+```
+src/
+├── components/           # Reusable UI components
+│   ├── Navigation.tsx
+│   ├── LoadingSpinner.tsx
+│   └── VideoRecorder.tsx
+├── pages/               # Main page components (Views)
+│   ├── LoginPage.tsx
+│   ├── SignupPage.tsx
+│   ├── ProfilePage.tsx
+│   ├── AssessmentPage.tsx
+│   ├── PerformancePage.tsx
+│   ├── TrainingPage.tsx
+│   ├── SocialPage.tsx
+│   └── AdminPage.tsx
+├── hooks/               # Custom React hooks (ViewModels)
+│   ├── useAuth.ts
+│   ├── useAthlete.ts
+│   ├── useAssessment.ts
+│   └── usePerformance.ts
+├── services/            # Firebase service classes
+│   ├── authService.ts
+│   ├── athleteService.ts
+│   ├── assessmentService.ts
+│   └── performanceService.ts
+├── models/              # TypeScript interfaces
+│   └── index.ts
+├── config/              # Configuration files
+│   └── firebase.ts
+├── data/                # Static JSON data
+│   └── trainingPrograms.json
+└── utils/               # Utility functions
+```
+
+## Key Features Implemented
+
+✅ **Complete Authentication System** (Email + Phone OTP)  
+✅ **Profile Management** with image upload  
+✅ **Video Assessment Recording** with camera API  
+✅ **Performance Tracking** with charts  
+✅ **Training Programs** with filtering  
+✅ **Responsive Material-UI Design**  
+✅ **MVVM Architecture** with custom hooks  
+✅ **Firestore Security Rules**  
+✅ **TypeScript Throughout**  
+
+## Browser Compatibility
+- **Chrome 88+** (recommended for video recording)
+- **Firefox 85+**
+- **Edge 88+**
+- **Safari 14+** (limited video codec support)
+
+## Future Enhancements
+- Complete Social Feed implementation
+- Full Admin Dashboard with rankings
+- Real AI scoring for assessments
+- Push notifications
+- Progressive Web App (PWA) features
+- More detailed analytics
    ```
 
 2. **Configure Firebase**:

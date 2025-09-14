@@ -106,3 +106,5 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 lint-results*.xml
+node_modules
+.vercel

@@ -1,7 +1,9 @@
 package com.athletex.ui.adapter
 
+import android.animation.ObjectAnimator
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.animation.DecelerateInterpolator
 import androidx.recyclerview.widget.RecyclerView
 import com.athletex.databinding.ItemMainMenuBinding
 import com.athletex.ui.model.MenuItem
@@ -19,8 +21,49 @@ class MainMenuAdapter(
             binding.menuDescription.text = menuItem.description
             binding.menuIcon.setImageResource(menuItem.iconRes)
             
+            // Add entrance animation
+            binding.root.alpha = 0f
+            binding.root.translationY = 100f
+            
+            ObjectAnimator.ofFloat(binding.root, "alpha", 0f, 1f).apply {
+                duration = 300
+                startDelay = (adapterPosition * 100).toLong()
+                interpolator = DecelerateInterpolator()
+                start()
+            }
+            
+            ObjectAnimator.ofFloat(binding.root, "translationY", 100f, 0f).apply {
+                duration = 300
+                startDelay = (adapterPosition * 100).toLong()
+                interpolator = DecelerateInterpolator()
+                start()
+            }
+            
             binding.root.setOnClickListener {
-                onItemClick(menuItem)
+                // Add click animation
+                val scaleDown = ObjectAnimator.ofFloat(binding.root, "scaleX", 1f, 0.95f)
+                val scaleDownY = ObjectAnimator.ofFloat(binding.root, "scaleY", 1f, 0.95f)
+                val scaleUp = ObjectAnimator.ofFloat(binding.root, "scaleX", 0.95f, 1f)
+                val scaleUpY = ObjectAnimator.ofFloat(binding.root, "scaleY", 0.95f, 1f)
+                
+                scaleDown.duration = 100
+                scaleDownY.duration = 100
+                scaleUp.duration = 100
+                scaleUpY.duration = 100
+                
+                scaleDown.start()
+                scaleDownY.start()
+                
+                scaleDown.addListener(object : android.animation.Animator.AnimatorListener {
+                    override fun onAnimationStart(animation: android.animation.Animator) {}
+                    override fun onAnimationEnd(animation: android.animation.Animator) {
+                        scaleUp.start()
+                        scaleUpY.start()
+                        onItemClick(menuItem)
+                    }
+                    override fun onAnimationCancel(animation: android.animation.Animator) {}
+                    override fun onAnimationRepeat(animation: android.animation.Animator) {}
+                })
             }
         }
     }

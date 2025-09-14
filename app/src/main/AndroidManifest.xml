@@ -64,6 +64,10 @@
             android:name=".ui.admin.AdminDashboardActivity"
             android:exported="false" />
             
+        <activity
+            android:name=".ui.training.TrainingDetailActivity"
+            android:exported="false" />
+            
     </application>
 
 </manifest>

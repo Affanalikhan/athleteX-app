@@ -84,7 +84,9 @@ class MainActivity : AppCompatActivity() {
         )
         
         menuAdapter = MainMenuAdapter(menuItems) { menuItem ->
-            startActivity(Intent(this, menuItem.destinationClass))
+            val intent = Intent(this, menuItem.destinationClass)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
         
         binding.mainMenuRecyclerView.apply {
